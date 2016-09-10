@@ -13,10 +13,17 @@ public class MainApplication {
         Pattern ala = Pattern.compile("al/S");
         Pattern kot = Pattern.compile("kot");
 
+        Integer firstApearence;
+        Integer lastAppearance;
+
         Matcher mAla = ala.matcher(text);
         Matcher mKot = kot.matcher(text);
 
 
-        boolean b = mAla.find();
+        do{
+            mAla.find();
+
+        }while(mAla.hitEnd());
+
     }
 }
